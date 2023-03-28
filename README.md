@@ -22,6 +22,13 @@ We evaluate the pretrained checkpoints provided [here](https://github.com/allena
 We first finetune pretrained checkpoints of OFA models on the four tasks in CoCoCON and then evaluate them on CoCoCON. Instructions for training OFA models coming soon!
 
 #### Evaluation of COCO Tasks
+Migrate to the evaluators directory i.e. ```cd evaluators/```.
+
+##### Image Captioning
+1. Install packages required for COCO Caption Evaluation.\
+```pip install -r requirements.txt```<br>
+2. Run the following command using output files from Unified-IO or OFA.\
+```python coco_eval.py <path-to-output-file> ../data/cococon.json```<br>
 
 ### Acknowledgements
 We thank the researchers behind [Unified-IO](https://github.com/allenai/unified-io-inference) and [OFA](https://github.com/OFA-Sys/OFA) for making their models available for training and inference.
